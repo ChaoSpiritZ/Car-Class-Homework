@@ -143,7 +143,11 @@ namespace Car_Homework
             {
                 Console.WriteLine("the car is not turned on");
             }
-            else if(_currentKilometrage - _lastMaintenance + locationDistance >= _maintenanceGrace)
+            else if(locationDistance > _maintenanceGrace)
+            {
+                Console.WriteLine("You can't drive THAT far");
+            }
+            else if(_currentKilometrage - _lastMaintenance + locationDistance > _maintenanceGrace)
             {
                 Console.WriteLine("The car needs maintenance before driving that far");
             }
